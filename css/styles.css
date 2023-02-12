@@ -1,0 +1,51 @@
+/* start with the smallest background size first */
+.inner-container {
+    /* this will be a fluid container until the breakpoint */
+    /* add space so that content is not touching the edge of the wiewpoint */
+    padding: 2rem 1rem;
+}
+
+
+header {
+    height: 400px;
+    padding: 2rem 1rem;
+    /* background-color: #eff2f7; */
+    /* background-image: url(../img/small-bg.webp);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+    /* backgound shorthand: image, position, size (x & y), repeat  */
+    background: url(../img/small-bg.webp) center bottom / cover no-repeat;
+}
+
+main {
+    background-color: rgb(173, 230, 173);
+}
+
+footer {
+    background-color: rgb(237, 237, 170);
+}
+
+/* as the screen gets wider, the quality of the first image isn't as good, swap it out for a better quality image */
+@media screen and (min-width: 900px) {
+    header {
+        background: url(../img/med-bg.webp) center bottom / cover no-repeat;
+    }
+}
+
+/* bring in a fixed width container element- don't use the body, header element as a container */
+@media screen and (min-width: 1200px){
+    /* inner-conatiner now becones a fixed width container */
+    .inner-container {
+        width: 1160px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1700px){
+    header {
+        height: 600px;
+        background: url(../img/large-bg.webp) center bottom / cover no-repeat;
+    }
+}
